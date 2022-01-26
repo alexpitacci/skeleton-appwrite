@@ -1,0 +1,22 @@
+<app-account-toolbar></app-account-toolbar>
+<div class="container">
+  <div class="principal">
+    <h1>Recuperar a senha</h1>
+    <form [formGroup]="recoverForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+      <button mat-button type="submit" [disabled]="!recoverForm.valid">
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APP_ENDPOINT: 'http://localhost/v1',
+  APP_PROJECT: '61ec61d31f64d85d4af6',
+  APP_RECOVERY_REDIRECT: 'http://localhost:4200/account/confirmation',
 };
 
 /*

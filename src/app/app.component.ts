@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { AppwriteService } from './appwrite.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'gradativo-app';
+  session = this.appwriteService.session;
+  constructor(private appwriteService: AppwriteService) {}
 }

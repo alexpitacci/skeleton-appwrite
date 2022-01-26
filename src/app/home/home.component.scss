@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1108px;
+}

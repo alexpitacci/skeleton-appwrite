@@ -1,0 +1,38 @@
+<app-account-toolbar></app-account-toolbar>
+<div class="container">
+  <div class="principal">
+    <h1>Entrar</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label for="password">Senha:</mat-label>
+        <input
+          matInput
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          required
+        />
+      </mat-form-field>
+      <div class="alert">
+        {{ error }}
+      </div>
+      <button mat-button type="submit" [disabled]="!loginForm.valid">
+        Entrar
+      </button>
+      Não é registrado? <a routerLink="signup">Registrar</a>
+      <div class="recover"><a routerLink="recover">Esqueceu a senha?</a></div>
+    </form>
+  </div>
+</div>

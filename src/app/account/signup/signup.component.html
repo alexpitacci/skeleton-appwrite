@@ -1,0 +1,37 @@
+<app-account-toolbar></app-account-toolbar>
+<div class="container">
+  <div class="principal">
+    <h1>Registrar</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label for="name">Nome</mat-label>
+        <input matInput type="text" id="name" formControlName="name" required />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label for="email">Email</mat-label>
+        <input
+          matInput
+          type="email"
+          id="email"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label for="password">Senha</mat-label>
+        <input
+          matInput
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
+      </mat-form-field>
+      <div class="alert">{{ error }}</div>
+      <button mat-button type="submit" [disabled]="!signupForm.valid">
+        Registrar
+      </button>
+      Já é registrado? <a routerLink="/account">Entrar</a>
+    </form>
+  </div>
+</div>
