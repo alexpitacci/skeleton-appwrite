@@ -16,3 +16,14 @@
 .userImage {
   margin-left: 20px;
 }
+
+.container {
+  height: calc(100vh - 56px);
+  margin: 20px;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  padding: 16px;
+}
